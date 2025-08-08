@@ -1,0 +1,40 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+p {
+    font-size: 1.2em;
+    color: #555;
+}
+.grid {
+    display: grid;
+    justify-content: center;
+    gap: 6px;
+    margin: 30px auto;
+    max-width: 90vw;
+}
+.square {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.square::hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+@media (min-width: 768px) {
+    .square {
+        width: 75px;
+        height: 75px;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Galeria de Imagens</h1>
+        <button id="toggleTheme" title="Alternar tema">🌙</button>
+    </div>
+    <div class="gallery">
+        <img src="img/Paisagem 1.jpg" alt="Imagem 1">
+        <img src="img/Paisagem 2.webp" alt="Imagem 2">
+        <img src="img/Paisagem 3.webp" alt="Imagem 3">
+        <img src="img/Paisagem 4.jfif" alt="Imagem 4">
+        <img src="img/Paisagem 5.webp" alt="Imagem 5">
+        <img src="img/Paisagem 6.jfif" alt="Imagem 6">
+    </div>
+    <div class="modal" id="modal">
+        <span class="close" id="closeBtn">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

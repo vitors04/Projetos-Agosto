@@ -1,0 +1,59 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #2e2e2e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+.carta {
+    width: 140px;
+    height: 200px;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.topo, .base {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+    font-weight: bold;
+}
+.base {
+    transform: rotate(180deg);
+    align-items: flex-start;
+}
+.centro {
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #1976D2;
+}
