@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="contato" class="contact">
+        <h2>Contato</h2>
+        <p>Sinta-se à vontade para entrar em contato comigo!</p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message"
+                rows="5" required></textarea>
+                <span class="error-message" id="messageError"></span>
+            </div>
+            <button type="submit" class="button">Enviar Mensagem</button>
+            <div id="formMessage" class="form-message"></div>
+        </form>
+    </section>
+</body>
+</html>
