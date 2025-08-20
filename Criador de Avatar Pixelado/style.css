@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #1e1e2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .container {
+    text-align: center;
+  }
+  .interface {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .editor {
+    text-align: center;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(18, 30px);
+    grid-template-rows: repeat(20, 30px);
+    gap: 2px;
+    margin: 10px 0;
+  }
+  .exemplo .cell, .exemplo div {
+    border: 1px solid #ccc;
+  }  
+  .cell {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  .example-image {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .example-image img {
+    width: 90%;
+    max-width: 160px;
+    border: 3px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .controls {
+    margin-bottom: 10px;
+  }
+  #limpar {
+    margin-left: 10px;
+    padding: 6px 12px;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  #limpar:hover {
+    background-color: #e64a19;
+  }
+  .exemplos {
+    text-align: center;
+  }
+  .exemplo {
+    width: fit-content;
+    border: 2px solid #888;
+    margin: 10px auto;
+    --pixels: '';
+  }
+  .exemplo div {
+    width: 30px;
+    height: 30px;
+  }
+  .exemplo {
+    display: grid;
+    grid-template-columns: repeat(8, 30px);
+    grid-template-rows: repeat(8, 30px);
+    gap: 2px;
+  }
+  .exemplo::before {
+    content: "";
+  }
+  .exemplo div:nth-child(n) {
+    background-color: transparent;
+  }
+  .exemplo::after {
+    content: "";
+  }
+  .exemplo {
+    background-color: white;
+  }
+  .exemplo div {
+    background-color: white;
+  }
+  .exemplo::after {
+    display: none;
+  }
+  .exemplo div:nth-child(n) {
+    background-color: white;
+  }
+  .exemplo div {
+    background-color: white;
+  }
+  .exemplo div:nth-child(n) {
+    background-color: white;
+  }
+  .exemplo div:nth-child(n) {
+    background-color: white;
+  }
+  .exemplo {
+    display: grid;
+    grid-template-columns: repeat(8, 30px);
+    grid-template-rows: repeat(8, 30px);
+  }
+  .exemplo::before {
+    content: '';
+    display: contents;
+  }
+  .exemplo {
+    background-color: #000;
+  }
+  .exemplo div {
+    width: 30px;
+    height: 30px;
+  }
+  .exemplo {
+    background-color: transparent;
+  }
+  .exemplo::before {
+    content: '';
+    display: contents;
+  }
+  .exemplo::after {
+    content: '';
+    display: contents;
+  }
+  .exemplo::before {
+    content: '';
+    display: contents;
+  }
+  .exemplo {
+    display: grid;
+  }
+  .exemplo div {
+    background-color: white;
+  }
+  .exemplo[style*="--pixels"]::before {
+    content: "";
+    display: contents;
+  }
+  .exemplo[style*="--pixels"] {
+    display: grid;
+  }
+  .exemplo[style*="--pixels"]::after {
+    content: "";
+    display: contents;
+  }
+  .exemplo[style*="--pixels"] > * {
+    background-color: white;
+  }
