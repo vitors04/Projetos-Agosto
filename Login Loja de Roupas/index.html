@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Cadastro - StyleHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <!-- Adicionado container para imagem de fundo customizável -->
+    <div class="auth-background-container">
+        <!-- Espaço reservado para imagem de fundo - substitua a URL abaixo pela sua imagem -->
+        <div class="auth-background-image" style="background-image: url('img/imagem-fundo.png')"></div>
+        <div class="auth-background-overlay"></div>
+    </div>
+    
+    <div class="container">
+        <div class="auth-header">
+            <!-- Melhorado o design do logo e header -->
+            <div class="auth-logo">
+                <span class="logo-icon">👗</span>
+                <span class="logo-text">StyleHub</span>
+            </div>
+            <h1>Bem-vindo à StyleHub!</h1>
+            <p class="auth-subtitle">Sua loja de moda online premium</p>
+        </div>
+        
+        <div class="auth-forms">
+            <!-- Melhorado o design dos botões de toggle -->
+            <div class="form-toggle">
+                <button id="show-login-btn" class="toggle-btn active">
+                    <span class="btn-icon">🔑</span>
+                    <span>Login</span>
+                </button>
+                <button id="show-register-btn" class="toggle-btn">
+                    <span class="btn-icon">👤</span>
+                    <span>Cadastro</span>
+                </button>
+            </div>
+
+            <!-- Aprimorado o formulário de login com novos estilos -->
+            <form id="login-form" class="auth-form active">
+                <h2>
+                    <span class="form-icon">🔐</span>
+                    Entrar na sua conta
+                </h2>
+                <div class="form-group">
+                    <label for="login-username">
+                        <span class="label-icon">👤</span>
+                        Nome de Usuário
+                    </label>
+                    <input type="text" id="login-username" placeholder="Digite seu nome de usuário" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">
+                        <span class="label-icon">🔒</span>
+                        Senha
+                    </label>
+                    <input type="password" id="login-password" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Entrar</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+                <p id="login-message" class="message error"></p>
+            </form>
+
+            <!-- Aprimorado o formulário de cadastro com novos estilos -->
+            <form id="register-form" class="auth-form hidden">
+                <h2>
+                    <span class="form-icon">✨</span>
+                    Criar nova conta
+                </h2>
+                <div class="form-group">
+                    <label for="register-username">
+                        <span class="label-icon">👤</span>
+                        Nome de Usuário
+                    </label>
+                    <input type="text" id="register-username" placeholder="Escolha um nome de usuário" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">
+                        <span class="label-icon">📧</span>
+                        Email
+                    </label>
+                    <input type="email" id="register-email" placeholder="Digite seu melhor email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">
+                        <span class="label-icon">🔒</span>
+                        Senha
+                    </label>
+                    <input type="password" id="register-password" placeholder="Crie uma senha segura" required>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Cadastrar</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+                <p id="register-message" class="message error"></p>
+            </form>
+        </div>
+
+        <!-- Adicionado rodapé com informações adicionais -->
+        <div class="auth-footer">
+            <p class="footer-text">
+                <span class="footer-icon">🛡️</span>
+                Seus dados estão seguros conosco
+            </p>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

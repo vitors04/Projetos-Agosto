@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Sua Loja de Roupas Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Replaced restaurant menu with modern clothing store interface -->
+    <div class="store-container">
+        <header class="store-header">
+            <div class="header-content">
+                <h1 class="store-logo">👗 StyleHub</h1>
+                <p class="store-tagline">Moda que define seu estilo</p>
+                <div class="user-info">
+                    <span class="welcome-text">Bem-vindo(a), <span id="dashboard-username"></span>!</span>
+                    <span class="user-email" id="dashboard-email"></span>
+                </div>
+                <div class="header-actions">
+                    <button class="cart-btn">🛒 Carrinho (0)</button>
+                    <button id="logout-btn" class="logout-button">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <nav class="category-nav">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="feminino">Feminino</button>
+            <button class="category-btn" data-category="masculino">Masculino</button>
+            <button class="category-btn" data-category="acessorios">Acessórios</button>
+            <button class="category-btn" data-category="calcados">Calçados</button>
+        </nav>
+
+        <main class="products-container">
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </main>
+
+        <div class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <h3>Seu Carrinho</h3>
+                <button class="close-cart">×</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <p class="empty-cart">Seu carrinho está vazio</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: R$ <span id="cart-total">0,00</span></strong>
+                </div>
+                <button class="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+
+        <div class="cart-overlay" id="cart-overlay"></div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
