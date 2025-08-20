@@ -1,0 +1,82 @@
+:root {
+    --bg: #f9f9f9;
+    --text: #333;
+    --accent: #007bff;
+    --tab-bg: #fff;
+    --tab-hover: #e0e0e0;
+    --active-bg: #e3f2fd;
+}
+body.dark {
+    --bg: #121212;
+    --text: #eeeeee;
+    --accent: #64b5f6;
+    --tab-bg: #1e1e1e;
+    --tab-hover: #2c2c2c;
+    --active-bg: #263238;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+.tabs-container {
+    max-width: 600px;
+    margin: auto;
+    background: var(--tab-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+#toggleTheme {
+    position: absolute;
+    top: -35px;
+    right: -95px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text);
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent);
+}
+.tab {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: var(--tab-bg);
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+    color: var(--text);
+    border-radius: 8px 8px 0 0;
+}
+.tab:hover {
+    background: var(--tab-hover);
+}
+.tab.active {
+    background: var(--active-bg);
+    color: var(--accent);
+}
+.tab-content {
+    display: none;
+    padding: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.tab-content.active {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
