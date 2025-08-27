@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Tamagotchi Virtual Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-particles"></div>
+    
+    <div class="tamagotchi-container">
+        <div class="device-header">
+            <h1>🎮 Tamagotchi Premium</h1>
+            <div class="coins-display">
+                <span class="coin-icon">🪙</span>
+                <span id="coins-amount">100</span>
+            </div>
+        </div>
+
+        <div class="tamagotchi-display">
+            <div class="display-effects">
+                <div id="hearts-effect" class="hearts-effect"></div>
+                <div id="sparkles-effect" class="sparkles-effect"></div>
+                <div id="food-effect" class="food-effect"></div>
+            </div>
+            
+            <div id="pet-mood" class="pet-mood">😊</div>
+            <div id="pet-image" class="pet-image">🥚</div>
+            <p id="pet-name" class="pet-name">Ovo</p>
+            
+            <div class="pet-level">
+                <span class="level-text">Nível <span id="pet-level">1</span></span>
+                <div class="exp-bar">
+                    <div id="exp-fill" class="exp-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-panel">
+            <div class="status-item">
+                <span class="status-icon">🍔</span> 
+                <span class="status-label">Fome:</span>
+                <div class="status-bar">
+                    <div id="hunger-bar" class="status-bar-fill"></div>
+                </div>
+                <span id="status-hunger" class="status-value">100%</span>
+            </div>
+            <div class="status-item">
+                <span class="status-icon">😊</span> 
+                <span class="status-label">Felicidade:</span>
+                <div class="status-bar">
+                    <div id="happiness-bar" class="status-bar-fill"></div>
+                </div>
+                <span id="status-happiness" class="status-value">100%</span>
+            </div>
+            <div class="status-item">
+                <span class="status-icon">⚡</span> 
+                <span class="status-label">Energia:</span>
+                <div class="status-bar">
+                    <div id="energy-bar" class="status-bar-fill"></div>
+                </div>
+                <span id="status-energy" class="status-value">100%</span>
+            </div>
+            <div class="status-item">
+                <span class="status-icon">🧼</span> 
+                <span class="status-label">Higiene:</span>
+                <div class="status-bar">
+                    <div id="cleanliness-bar" class="status-bar-fill"></div>
+                </div>
+                <span id="status-cleanliness" class="status-value">100%</span>
+            </div>
+            <div class="status-item">
+                <span class="status-icon">❤️</span> 
+                <span class="status-label">Saúde:</span>
+                <div class="status-bar">
+                    <div id="health-bar" class="status-bar-fill"></div>
+                </div>
+                <span id="status-health" class="status-value">100%</span>
+            </div>
+            <div class="status-item age-item">
+                <span class="status-icon">🎂</span> 
+                <span class="status-label">Idade:</span>
+                <span id="status-age" class="status-value">0 dias</span>
+            </div>
+        </div>
+
+        <div class="action-tabs">
+            <button id="tab-care" class="tab-button active">🏠 Cuidar</button>
+            <button id="tab-games" class="tab-button">🎮 Jogos</button>
+            <button id="tab-shop" class="tab-button">🛒 Loja</button>
+            <button id="tab-achievements" class="tab-button">🏆 Conquistas</button>
+        </div>
+
+        <div id="care-panel" class="action-panel active">
+            <div class="action-buttons">
+                <button id="action-feed" class="action-button feed-btn">🍔 Alimentar</button>
+                <button id="action-play" class="action-button play-btn">⚽ Brincar</button>
+                <button id="action-sleep" class="action-button sleep-btn">😴 Dormir</button>
+                <button id="action-clean" class="action-button clean-btn">🧼 Limpar</button>
+                <button id="action-medicine" class="action-button medicine-btn">💊 Remédio</button>
+                <button id="action-pet" class="action-button pet-btn">🤗 Carinho</button>
+            </div>
+        </div>
+
+        <div id="games-panel" class="action-panel">
+            <div class="mini-games">
+                <button id="game-memory" class="game-button">🧠 Jogo da Memória</button>
+                <button id="game-reaction" class="game-button">⚡ Teste de Reflexo</button>
+                <button id="game-math" class="game-button">🎨 Adivinhe a Cor</button>
+                <button id="game-catch" class="game-button">🎯 Pegar Frutas</button>
+            </div>
+        </div>
+
+        <div id="shop-panel" class="action-panel">
+            <div class="shop-items">
+                <div class="shop-item" data-item="premium-food" data-cost="50">
+                    <div class="item-icon">🍖</div>
+                    <div class="item-info">
+                        <div class="item-name">Comida Premium</div>
+                        <div class="item-cost">🪙 50</div>
+                    </div>
+                </div>
+                <div class="shop-item" data-item="toy" data-cost="30">
+                    <div class="item-icon">🧸</div>
+                    <div class="item-info">
+                        <div class="item-name">Brinquedo</div>
+                        <div class="item-cost">🪙 30</div>
+                    </div>
+                </div>
+                <div class="shop-item" data-item="medicine" data-cost="40">
+                    <div class="item-icon">💊</div>
+                    <div class="item-info">
+                        <div class="item-name">Remédio</div>
+                        <div class="item-cost">🪙 40</div>
+                    </div>
+                </div>
+                <div class="shop-item" data-item="decoration" data-cost="80">
+                    <div class="item-icon">🎨</div>
+                    <div class="item-info">
+                        <div class="item-name">Decoração</div>
+                        <div class="item-cost">🪙 80</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="achievements-panel" class="action-panel">
+            <div class="achievements-list">
+                <div class="achievement" data-achievement="first-feed">
+                    <div class="achievement-icon">🍔</div>
+                    <div class="achievement-info">
+                        <div class="achievement-name">Primeira Refeição</div>
+                        <div class="achievement-desc">Alimente seu pet pela primeira vez</div>
+                    </div>
+                    <div class="achievement-status">🔒</div>
+                </div>
+                <div class="achievement" data-achievement="happy-pet">
+                    <div class="achievement-icon">😊</div>
+                    <div class="achievement-info">
+                        <div class="achievement-name">Pet Feliz</div>
+                        <div class="achievement-desc">Mantenha a felicidade em 100%</div>
+                    </div>
+                    <div class="achievement-status">🔒</div>
+                </div>
+                <div class="achievement" data-achievement="level-5">
+                    <div class="achievement-icon">⭐</div>
+                    <div class="achievement-info">
+                        <div class="achievement-name">Nível 5</div>
+                        <div class="achievement-desc">Alcance o nível 5</div>
+                    </div>
+                    <div class="achievement-status">🔒</div>
+                </div>
+                <div class="achievement" data-achievement="game-master">
+                    <div class="achievement-icon">🎮</div>
+                    <div class="achievement-info">
+                        <div class="achievement-name">Mestre dos Jogos</div>
+                        <div class="achievement-desc">Vença 10 mini-jogos</div>
+                    </div>
+                    <div class="achievement-status">🔒</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <!-- Removed save and load buttons, keeping only reset -->
+            <button id="reset-game-btn" class="game-button danger">🔄 Reiniciar</button>
+        </div>
+
+        <div id="message-box" class="modal">
+            <div class="modal-content">
+                <p id="message-text"></p>
+                <button id="close-message-btn" class="action-button">OK</button>
+            </div>
+        </div>
+
+        <div id="game-modal" class="modal">
+            <div class="modal-content game-modal-content">
+                <div class="modal-header">
+                    <h3 id="game-title">Mini-Jogo</h3>
+                    <button id="close-game-btn" class="close-btn">✕</button>
+                </div>
+                <div id="game-content" class="game-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

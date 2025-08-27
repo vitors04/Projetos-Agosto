@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="map-container">
+        <div id="map-inner">
+            <img id="interactive-map-image" src="img/Paisagem.jpg"
+            alt="Mapa Interativo">
+        <div class="hotspot" id="hotspot1" style="left: 20%; top: 30%;">
+            <span class="hotspot-tooltip">Balão</span>
+        </div>
+        <div class="hotspot" id="hotspot2" style="left: 60%; top: 50%;">
+            <span class="hotspot-tooltip">Montanhas</span>
+        </div>
+        </div>
+    </div>
+    <div id="zoom-controls">
+        <button id="zoom-in">+</button>
+        <button id="zoom-out">-</button>
+        <button id="reset-zoom">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
